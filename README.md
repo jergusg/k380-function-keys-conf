@@ -7,7 +7,7 @@ Make function keys default on Logitech k380 bluetooth keyboard.
 ```
 sudo apt install gcc
 ```
-2) Download installation files.
+2) Download installation files https://github.com/jergusg/k380-function-keys-conf/releases/ (Source code).
 
 3) Connect your K380 keyboard via bluetooth to your computer.
 
