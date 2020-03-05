@@ -3,32 +3,28 @@ Make function keys default on Logitech k380 bluetooth keyboard.
 
 ## Instructions
 
-1) First install `gcc`. On Ubuntu run:
+1) First install `gcc` and `make`. On Ubuntu run:
 ```
-sudo apt install gcc
+sudo apt install gcc make
 ```
 2) Download installation files https://github.com/jergusg/k380-function-keys-conf/releases/ (Source code).
 
 3) Connect your K380 keyboard via bluetooth to your computer.
 
-4) Run `build.sh`
-
-```
-./build.sh
-```
+4) Run `make install`
 
 5) To switch keyboard's upper keys to F-keys run:
 
 ```
-sudo ./k380_conf -d /dev/hidrawX -f on
+sudo k380_conf -d /dev/hidrawX -f on
 ```
 Where X is number of your keyboard hidraw interface. Possibly `0, 1, 2, 3`.
 
 ### Switch keys to F-keys automatically
 
-Follow instructions your received when you built `k380_conf`:
+After install do the following:
 ```
-sudo cp /your-build-path/80-k380.rules /etc/udev/rules.d/ && sudo udevadm control --reload
+sudo make reload
 ```
 Now, when you reconnect your keyboard it will be automatically switched to F-keys mode.
 
