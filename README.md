@@ -3,9 +3,11 @@ Make function keys default on Logitech k380 bluetooth keyboard.
 
 ## Instructions
 
-1) First install `gcc` and `make`. On Ubuntu run:
+1) First install `build-essential` package (includes `gcc`, `make`, `libc-dev`, etc.). 
+
+On Debian/Ubuntu run:
 ```
-sudo apt install gcc make
+sudo apt install build-essential
 ```
 2) Download installation files https://github.com/jergusg/k380-function-keys-conf/releases/ (Source code).
 
