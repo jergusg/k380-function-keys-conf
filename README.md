@@ -3,11 +3,14 @@ Make function keys default on Logitech k380 bluetooth keyboard.
 
 ## Instructions
 
-1) First install `build-essential` package (includes `gcc`, `make`, `libc-dev`, etc.). 
-
-On Debian/Ubuntu run:
-```
+1) First install `build-essential` package (includes `gcc`, `make`, `libc-dev`, etc.).
+```shell
+# On Debian/Ubuntu run:
 sudo apt install build-essential
+# on CentOS/REHEL/Fedora
+sudo dnf groupinstall "Development Tools"
+# on Arch-linux 
+sudo pacman -Sy base-devel
 ```
 2) Download installation files https://github.com/jergusg/k380-function-keys-conf/releases/ (Source code).
 
@@ -15,12 +18,15 @@ sudo apt install build-essential
 
 4) Run `make install`
 
-5) To switch keyboard's upper keys to F-keys run:
+5) Get the number of your keyboard hidraw interface - `/dev/hidrawX` where X is `0, 1, 2, 3`.
+```shell
+sudo ./fn_on.sh
+```
 
+6) To switch keyboard's upper keys to F-keys run:
 ```
 sudo k380_conf -d /dev/hidrawX -f on
 ```
-Where X is number of your keyboard hidraw interface. Possibly `0, 1, 2, 3`.
 
 ### Switch keys to F-keys automatically
 
