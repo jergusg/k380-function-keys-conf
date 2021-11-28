@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# Avoid the keyboard is not aware of being linked at this time
+sleep 1s
 
 TOOL="$(dirname $0)/k380_conf"
 # Check if device is our keyboard: 046D:B342
