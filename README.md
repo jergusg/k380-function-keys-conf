@@ -16,7 +16,7 @@ sudo pacman -Sy base-devel
 
 3) Connect your K380 keyboard via bluetooth to your computer.
 
-4) Run `make install`
+4) Run `sudo make install`
 
 5) Get the number of your keyboard hidraw interface - `/dev/hidrawX` where X is `0, 1, 2, 3`.
 ```shell
